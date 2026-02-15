@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Craftiva — Timeless Creations for Your Space</title>
+  <meta name="description" content="Quality craftsmanship. Everyday beauty. Made with purpose. Premium home goods designed for daily life.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    /* ═══════════════════════════════════════════
+       CSS CUSTOM PROPERTIES
+    ═══════════════════════════════════════════ */
+    :root {
+      --bg-dark: #1A1714;
+      --bg-darker: #0F0D0B;
+      --surface: #242019;
+      --text-primary: #F5F0E8;
+      --text-secondary: #9E9589;
+      --accent: #C4935A;
+      --accent-light: #E8D5B7;
+    }
+
+    /* ═══════════════════════════════════════════
+       RESET & BASE
+    ═══════════════════════════════════════════ */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text-primary);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* ═══════════════════════════════════════════
+       UTILITIES
+    ═══════════════════════════════════════════ */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .section-padding {
+      padding: 140px 0;
+    }
+
+    /* Scroll-triggered fade-in */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 600ms ease, transform 600ms ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ═══════════════════════════════════════════
+       SECTION 1: HERO
+    ═══════════════════════════════════════════ */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 60px 24px 140px;
+      animation: heroFadeIn 800ms ease forwards;
+      opacity: 0;
+    }
+
+    @keyframes heroFadeIn {
+      to { opacity: 1; }
+    }
+
+    .hero-logo {
+      margin-bottom: 48px;
+    }
+
+    .hero-logo img {
+      width: 120px;
+      height: 120px;
+      object-fit: contain;
+    }
+
+    .hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 400;
+      font-size: 88px;
+      line-height: 1.2;
+      color: var(--text-primary);
+      margin-bottom: 24px;
+      max-width: 900px;
+    }
+
+    .hero-sub {
+      font-size: 17px;
+      color: var(--text-secondary);
+      margin-bottom: 48px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--accent);
+      color: var(--bg-dark);
+      padding: 14px 32px;
+      border-radius: 2px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 15px;
+      font-weight: 500;
+      cursor: pointer;
+      border: none;
+      transition: opacity 200ms ease;
+      min-width: 200px;
+      text-align: center;
+    }
+
+    .btn:hover {
+      opacity: 0.85;
+    }
+
+    /* ═══════════════════════════════════════════
+       SECTION 2: BRAND STATEMENT
+    ═══════════════════════════════════════════ */
+    .brand-statement {
+      text-align: center;
+    }
+
+    .brand-statement .container {
+      max-width: 700px;
+    }
+
+    .brand-statement p {
+      font-size: 17px;
+      color: var(--text-primary);
+      line-height: 1.7;
+      margin-bottom: 24px;
+    }
+
+    .brand-statement p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* ═══════════════════════════════════════════
+       SECTION 3: WHAT WE MAKE
+    ═══════════════════════════════════════════ */
+    .what-we-make .cards {
+      display: flex;
+      gap: 32px;
+    }
+
+    .card {
+      flex: 1 1 0;
+    }
+
+    .card-image {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      background: var(--surface);
+      margin-bottom: 24px;
+      object-fit: cover;
+    }
+
+    .card-title {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 500;
+      font-size: 20px;
+      color: var(--text-primary);
+      margin-bottom: 12px;
+    }
+
+    .card-rule {
+      width: 60px;
+      height: 1px;
+      background: var(--accent);
+      margin-bottom: 16px;
+    }
+
+    .card-desc {
+      font-size: 16px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    /* ═══════════════════════════════════════════
+       SECTION 4: THE COLLECTION
+    ═══════════════════════════════════════════ */
+    .collection {
+      text-align: center;
+    }
+
+    .collection h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 400;
+      font-size: 44px;
+      color: var(--text-primary);
+      line-height: 1.2;
+    }
+
+    .collection-sub {
+      font-size: 17px;
+      color: var(--text-secondary);
+      margin-top: 24px;
+    }
+
+    .collection-boxes {
+      display: flex;
+      gap: 32px;
+      justify-content: center;
+      margin-top: 48px;
+    }
+
+    .collection-box {
+      flex: 1 1 300px;
+      max-width: 340px;
+      height: 400px;
+      border: 2px dashed var(--accent);
+      background: transparent;
+    }
+
+    /* ═══════════════════════════════════════════
+       SECTION 5: ABOUT
+    ═══════════════════════════════════════════ */
+    .about .container {
+      max-width: 800px;
+    }
+
+    .about h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 400;
+      font-size: 44px;
+      color: var(--text-primary);
+      line-height: 1.2;
+      margin-bottom: 32px;
+    }
+
+    .about p {
+      font-size: 17px;
+      color: var(--text-primary);
+      line-height: 1.7;
+      margin-bottom: 24px;
+    }
+
+    .about p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* ═══════════════════════════════════════════
+       SECTION 6: OUR STANDARD
+    ═══════════════════════════════════════════ */
+    .standard .container {
+      max-width: 800px;
+    }
+
+    .standard h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 400;
+      font-size: 44px;
+      color: var(--text-primary);
+      line-height: 1.2;
+      margin-bottom: 60px;
+    }
+
+    .principle {
+      margin-bottom: 60px;
+    }
+
+    .principle:last-child {
+      margin-bottom: 0;
+    }
+
+    .principle-name {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 500;
+      font-size: 19px;
+      color: var(--accent);
+    }
+
+    .principle-rule {
+      width: 60px;
+      height: 1px;
+      background: var(--accent);
+      margin-top: 12px;
+    }
+
+    .principle-copy {
+      font-size: 16px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-top: 20px;
+    }
+
+    /* ═══════════════════════════════════════════
+       SECTION 7: FOOTER
+    ═══════════════════════════════════════════ */
+    footer {
+      background: var(--bg-darker);
+      padding: 60px 0;
+    }
+
+    .footer-logo {
+      margin-bottom: 48px;
+    }
+
+    .footer-logo img {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+    }
+
+    .footer-columns {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 40px;
+    }
+
+    .footer-col-header {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 500;
+      font-size: 14px;
+      color: var(--accent);
+      margin-bottom: 12px;
+    }
+
+    .footer-col:last-child {
+      text-align: right;
+    }
+
+    .footer-col p,
+    .footer-col a {
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.8;
+      display: block;
+    }
+
+    .footer-col a:hover {
+      color: var(--text-primary);
+    }
+
+    .footer-tagline {
+      font-size: 12px;
+      color: var(--text-secondary);
+      text-align: center;
+      padding-top: 40px;
+      border-top: 1px solid rgba(158, 149, 137, 0.15);
+    }
+
+    /* ═══════════════════════════════════════════
+       RESPONSIVE — MOBILE (<768px)
+    ═══════════════════════════════════════════ */
+    @media (max-width: 768px) {
+      .section-padding {
+        padding: 100px 0;
+      }
+
+      .hero {
+        padding: 40px 24px 100px;
+      }
+
+      .hero h1 {
+        font-size: 44px;
+      }
+
+      .hero-sub {
+        font-size: 15px;
+      }
+
+      .hero-buttons {
+        gap: 20px;
+      }
+
+      .brand-statement p {
+        font-size: 15px;
+      }
+
+      .what-we-make .cards {
+        flex-direction: column;
+      }
+
+      .collection h2,
+      .about h2,
+      .standard h2 {
+        font-size: 36px;
+      }
+
+      .collection-boxes {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .collection-box {
+        width: 100%;
+        max-width: 100%;
+        height: 300px;
+      }
+
+      .footer-columns {
+        flex-direction: column;
+        gap: 40px;
+        text-align: center;
+        align-items: center;
+      }
+
+      .footer-logo {
+        text-align: center;
+      }
+
+      .footer-tagline {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 1: HERO
+  ═══════════════════════════════════════════ -->
+  <header class="hero" id="hero">
+    <div class="hero-logo">
+      <img src="logo.png" alt="Craftiva logo">
+    </div>
+    <h1>Timeless Creations for Your Space.</h1>
+    <p class="hero-sub">Quality craftsmanship. Everyday beauty. Made with purpose.</p>
+    <div class="hero-buttons">
+      <a href="#what-we-make" class="btn">The Collection</a>
+      <a href="#about" class="btn">About Us</a>
+    </div>
+  </header>
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 2: BRAND STATEMENT
+  ═══════════════════════════════════════════ -->
+  <section class="brand-statement section-padding fade-in">
+    <div class="container">
+      <p>Craftiva&trade; home goods are designed for daily life.</p>
+      <p>Honest materials. Calm aesthetics. Objects that earn their place on your table, your wall, your shelf &mdash; and stay there.</p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 3: WHAT WE MAKE
+  ═══════════════════════════════════════════ -->
+  <section class="what-we-make section-padding fade-in" id="what-we-make">
+    <div class="container">
+      <div class="cards">
+        <div class="card">
+          <img class="card-image" src="card1.jpg" alt="Display and organization product category">
+          <h3 class="card-title">Display &amp; Organization</h3>
+          <div class="card-rule"></div>
+          <p class="card-desc">Wall-mounted and freestanding wood displays for medals, awards, and meaningful objects. Designed to show what matters.</p>
+        </div>
+        <div class="card">
+          <img class="card-image" src="card2.jpg" alt="Kitchen and table product category">
+          <h3 class="card-title">Kitchen &amp; Table</h3>
+          <div class="card-rule"></div>
+          <p class="card-desc">Functional wood goods for the kitchen and dining table. Trays, boards, and surfaces built for daily use, not the back of a cabinet.</p>
+        </div>
+        <div class="card">
+          <img class="card-image" src="card3.jpg" alt="Home and living product category">
+          <h3 class="card-title">Home &amp; Living</h3>
+          <div class="card-rule"></div>
+          <p class="card-desc">Considered objects for the home. Each piece designed to look like it belongs &mdash; and built like it plans to stay.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 4: THE COLLECTION
+  ═══════════════════════════════════════════ -->
+  <section class="collection section-padding fade-in" id="collection">
+    <div class="container">
+      <h2>The Collection</h2>
+      <p class="collection-sub">First product arriving Spring 2026. More to follow.</p>
+      <div class="collection-boxes">
+        <div class="collection-box" aria-label="Upcoming product placeholder"></div>
+        <div class="collection-box" aria-label="Upcoming product placeholder"></div>
+        <div class="collection-box" aria-label="Upcoming product placeholder"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 5: ABOUT
+  ═══════════════════════════════════════════ -->
+  <section class="about section-padding fade-in" id="about">
+    <div class="container">
+      <h2>About</h2>
+      <p>We are an American home goods company founded in 2025.</p>
+      <p>The Craftiva collection is our line of daily-use objects for the home &mdash; honest materials, thoughtful design, built to last.</p>
+      <p>Founded on opposite coasts &mdash; Alexandria, Virginia and Sacramento, California &mdash; and united by the same frustration: most home goods are either commodity items or artisan pieces too precious to use. We're building the middle ground.</p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 6: OUR STANDARD
+  ═══════════════════════════════════════════ -->
+  <section class="standard section-padding fade-in" id="standard">
+    <div class="container">
+      <h2>Our Standard</h2>
+
+      <div class="principle">
+        <div class="principle-name">Material Honesty</div>
+        <div class="principle-rule"></div>
+        <p class="principle-copy">We use solid wood. If it looks like oak, it is oak. No veneers. No engineered substitutes dressed up to look like something better.</p>
+      </div>
+
+      <div class="principle">
+        <div class="principle-name">Designed for Use</div>
+        <div class="principle-rule"></div>
+        <p class="principle-copy">Every product is designed for the thing it will actually do. Not to look good in a photograph. Not to impress once. To be used every day and feel right every time.</p>
+      </div>
+
+      <div class="principle">
+        <div class="principle-name">Earned Place</div>
+        <div class="principle-rule"></div>
+        <p class="principle-copy">A Craftiva object should earn its place in your home. That means it works well, feels right in the hand, and looks like it belongs &mdash; not like it was purchased to fill a space.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 7: FOOTER
+  ═══════════════════════════════════════════ -->
+  <footer>
+    <div class="container">
+      <div class="footer-logo">
+        <img src="logo.png" alt="Craftiva logo">
+      </div>
+
+      <div class="footer-columns">
+        <div class="footer-col">
+          <div class="footer-col-header">Contact</div>
+          <a href="mailto:hello@craftiva.studio">hello@craftiva.studio</a>
+          <p>Alexandria, VA</p>
+          <p>Sacramento, CA</p>
+          <a href="https://craftiva.studio">craftiva.studio</a>
+        </div>
+        <div class="footer-col">
+          <p>&copy; 2026 Craftiva Studio. All Rights Reserved</p>
+          <p>Craftiva&trade; is a trademark of Craftiva Studio LLC.</p>
+        </div>
+      </div>
+
+      <div class="footer-tagline">Designed for daily use. Built to last.</div>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════════════════
+       SCROLL ANIMATIONS (Vanilla JS)
+  ═══════════════════════════════════════════ -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const faders = document.querySelectorAll('.fade-in');
+
+      const observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.15
+      });
+
+      faders.forEach(function (el) {
+        observer.observe(el);
+      });
+    });
+  </script>
+
+</body>
+</html>
