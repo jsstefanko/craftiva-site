@@ -1,0 +1,2 @@
+issue_id,date_reported,short_description,page_or_stage,device_browser,severity,reproduction_steps,expected_result,actual_result,screenshot_or_recording,owner,status,preview_or_build,fixed_in,retest_result,date_closed
+WEB-001,,,,,P2,,,,,,Open,,,,

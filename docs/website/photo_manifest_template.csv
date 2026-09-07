@@ -1,0 +1,23 @@
+slot_id,stable_web_path,role,required_aspect_ratio,recommended_minimum_pixels,fit_behavior,provisional_source,final_source,products_visible,product_statuses,rights_confirmed,launch_approved,alt_text,crop_or_usage_notes
+HOME-HERO-DESKTOP,/images/home/home-hero.jpg,Homepage hero desktop,16:9,2400x1350,cover,,,,,No,No,,Leave quiet space for headline and action
+HOME-HERO-MOBILE,/images/home/home-hero-mobile.jpg,Homepage hero mobile,4:5,1600x2000,cover,,,,,No,No,,Use a dedicated mobile composition
+HOME-P01-CARD,/images/home/p01-card.jpg,P01 homepage card,4:3,1600x1200,cover,,,P01,Available,No,No,,Readable at card size
+HOME-P02-CARD,/images/home/p02-card.jpg,P02 homepage card,4:3,1600x1200,cover,,,P02,Available,No,No,,Show both pieces
+P01-MAIN,/images/products/p01/p01-main.jpg,P01 primary product image,4:5,2000x2500,contain,,,P01,Available,No,No,,Keep full product visible
+P01-INSTALLED,/images/products/p01/p01-installed.jpg,P01 installed view,4:5,2000x2500,cover,,,P01,Available,No,No,,Show full mounted display
+P01-CAPACITY,/images/products/p01/p01-capacity.jpg,P01 loaded capacity view,4:5,2000x2500,cover,,,P01,Available,No,No,,Must not contradict capacity wording
+P01-PEGS,/images/products/p01/p01-pegs.jpg,P01 peg detail,1:1,1600x1600,cover,,,P01,Available,No,No,,Show peg and ribbon interaction
+P01-BIB-CLIP,/images/products/p01/p01-bib-clip.jpg,P01 bib clip detail,1:1,1600x1600,cover,,,P01,Available,No,No,,Show clip with appropriate keepsake
+P01-INSTALLATION,/images/products/p01/p01-installation.jpg,P01 installation view,4:5,2000x2500,cover,,,P01,Available,No,No,,Show Z-clip and included hardware accurately
+P01-PACKAGING,/images/products/p01/p01-packaging.jpg,P01 packaging view,4:5,2000x2500,cover,,,P01,Available,No,No,,Show box and printed materials
+P02-MAIN,/images/products/p02/p02-main.jpg,P02 primary product image,4:5,2000x2500,contain,,,P02,Available,No,No,,Keep both shapes fully visible
+P02-MATERIAL,/images/products/p02/p02-material.jpg,P02 material detail,1:1,1600x1600,cover,,,P02,Available,No,No,,Show beech grain edge and finish
+P02-UNDERSIDE,/images/products/p02/p02-underside.jpg,P02 underside detail,1:1,1600x1600,cover,,,P02,Available,No,No,,Show silicone feet and wood plugs
+P02-IN-USE,/images/products/p02/p02-in-use.jpg,P02 single use view,4:5,2000x2500,cover,,,P02,Available,No,No,,Use compatible cookware if showing attachment
+P02-PAIR-IN-USE,/images/products/p02/p02-pair-in-use.jpg,P02 pair use view,3:2,1800x1200,cover,,,P02,Available,No,No,,Show both pieces in a real setting
+P02-PACKAGING,/images/products/p02/p02-packaging.jpg,P02 packaging view,4:5,2000x2500,cover,,,P02,Available,No,No,,Show cushioned kraft packaging and printed materials
+STUDIO-SERVING-TRAY,/images/studio/serving-tray.jpg,Studio serving tray,4:5,1600x2000,cover,,,,Forthcoming,No,No,,Surrounding copy must state Forthcoming
+STUDIO-CUTTING-BOARD,/images/studio/cutting-board.jpg,Studio cutting board,4:5,1600x2000,cover,,,,Forthcoming,No,No,,Surrounding copy must state Forthcoming
+STUDIO-LOTUS-TRIVET,/images/studio/lotus-trivet.jpg,Studio lotus trivet,4:5,1600x2000,cover,,,,In Development,No,No,,No price cart or release promise
+STUDIO-SHELL-TRIVET,/images/studio/shell-trivet.jpg,Studio shell trivet,4:5,1600x2000,cover,,,,In Development,No,No,,No price cart or release promise
+STUDIO-WOODEN-VASES,/images/studio/wooden-vases.jpg,Studio wooden vases,4:5,1600x2000,cover,,,,In Development,No,No,,No price cart or release promise
