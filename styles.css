@@ -937,6 +937,10 @@ h3 {
   object-position: center;
 }
 
+.room__image--medal-capacity img {
+  object-position: center top;
+}
+
 .room__image figcaption {
   margin-top: 13px;
   color: #756d65;
